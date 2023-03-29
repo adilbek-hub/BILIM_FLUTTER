@@ -16,6 +16,7 @@ class _LoginPageState extends State<LoginPage> {
   String? _gmail;
 
 // Биринчи вариант
+/*
   void controlNameEmail(String name, String email) {
     int index = 0;
     for (final student in studentter) {
@@ -45,28 +46,29 @@ class _LoginPageState extends State<LoginPage> {
       }
     }
   }
-
+*/
   // Экинчи вариант
-  /*
-  void controlNameEmail(String name, String email) {
-    for (int i = 0; i <= studentter.length; i++) {
-      if (name == studentter[i] && email == studentter[i].email) {
+
+  void controlNameEmail2(String name, String email) {
+    for (int i = 0; i <= studentter.length - 1; i++) {
+      if (_name == studentter[i].name && _gmail == studentter[i].email) {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => UserPage(),
+            builder: (context) => UserPage(
+              student: studentter[i],
+            ),
           ),
         );
         break;
       } else {
-       if(i == studentter.length){
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Сиздин атыңыз же почтаңыз туура эмес!')));
-       }
+        if (i == studentter.length - 1) {
+          ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('Сиздин атыңыз же почтаңыз туура эмес!')));
         }
       }
     }
   }
-  */
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
               width: double.infinity,
               height: double.infinity,
               decoration: BoxDecoration(
-                color: Color.fromARGB(0, 160, 217, 246).withOpacity(0.3),
+                color: const Color.fromARGB(0, 160, 217, 246).withOpacity(0.3),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Column(
@@ -154,7 +156,7 @@ class _LoginPageState extends State<LoginPage> {
                       minimumSize: const Size(200, 40),
                     ),
                     onPressed: () {
-                      controlNameEmail(_name!, _gmail!);
+                      controlNameEmail2(_name!, _gmail!);
                     },
                     child: const Text('Login'),
                   ),
