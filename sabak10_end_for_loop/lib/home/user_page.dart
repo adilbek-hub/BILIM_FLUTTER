@@ -3,7 +3,7 @@ import 'package:sabak10_end_for_loop/model.dart';
 
 class UserPage extends StatelessWidget {
   const UserPage({super.key, required this.student});
-  final Student student;
+  final String student;
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +12,7 @@ class UserPage extends StatelessWidget {
         title: const Text('UserPage'),
       ),
       body: Column(
-        children: [
-          Text('${student.name}'),
-          Text(student.email),
-          Text(student.age.toString()),
-          Text('${student.group}'),
-          Text('${student.id}'),
-        ],
+        children: [],
       ),
     );
   }

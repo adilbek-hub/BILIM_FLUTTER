@@ -16,7 +16,6 @@ class _LoginPageState extends State<LoginPage> {
   String? _gmail;
 
 // Биринчи вариант
-/*
   void controlNameEmail(String name, String email) {
     int index = 0;
     for (final student in studentter) {
@@ -46,29 +45,28 @@ class _LoginPageState extends State<LoginPage> {
       }
     }
   }
-*/
-  // Экинчи вариант
 
-  void controlNameEmail2(String name, String email) {
-    for (int i = 0; i <= studentter.length - 1; i++) {
-      if (_name == studentter[i].name && _gmail == studentter[i].email) {
+  // Экинчи вариант
+  /*
+  void controlNameEmail(String name, String email) {
+    for (int i = 0; i <= studentter.length; i++) {
+      if (name == studentter[i] && email == studentter[i].email) {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => UserPage(
-              student: studentter[i],
-            ),
+            builder: (context) => UserPage(),
           ),
         );
         break;
       } else {
-        if (i == studentter.length - 1) {
-          ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text('Сиздин атыңыз же почтаңыз туура эмес!')));
+       if(i == studentter.length){
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Сиздин атыңыз же почтаңыз туура эмес!')));
+       }
         }
       }
     }
   }
+  */
 
   @override
   Widget build(BuildContext context) {
@@ -156,7 +154,7 @@ class _LoginPageState extends State<LoginPage> {
                       minimumSize: const Size(200, 40),
                     ),
                     onPressed: () {
-                      controlNameEmail2(_name!, _gmail!);
+                      controlNameEmail(_name!, _gmail!);
                     },
                     child: const Text('Login'),
                   ),
