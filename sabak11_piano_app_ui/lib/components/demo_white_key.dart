@@ -9,6 +9,7 @@ class DemoWhiteKey extends StatefulWidget {
 
 class _DemoWhiteKeyState extends State<DemoWhiteKey> {
   bool isPressed = false;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -22,6 +23,7 @@ class _DemoWhiteKeyState extends State<DemoWhiteKey> {
           isPressed = false;
         });
       },
+      onTap: () {},
       child: Transform(
         transform: Matrix4.rotationX(isPressed ? 0.2 : 0.0),
         child: Container(
