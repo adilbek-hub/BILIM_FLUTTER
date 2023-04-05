@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DemoWhiteKey extends StatefulWidget {
-  const DemoWhiteKey({
-    super.key,
-  });
+  const DemoWhiteKey({super.key});
 
   @override
   State<DemoWhiteKey> createState() => _DemoWhiteKeyState();
