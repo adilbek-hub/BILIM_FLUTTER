@@ -16,14 +16,14 @@ class _HomePageState extends State<HomePage> {
   List<Icon> iconAluu = [];
 
   void teksher(bool koldonuu) {
+    bool correctAnswer = useQuize.joopAluu();
     setState(() {
       if (useQuize.isFinished() == true) {
         showDialog<void>(
           context: context,
-          barrierDismissible: false, // user must tap button!
+          barrierDismissible: false,
           builder: (BuildContext context) {
             return AlertDialog(
-              // <-- SEE HERE
               title: const Text('Тест QuizeApp'),
               content: SingleChildScrollView(
                 child: ListBody(
@@ -50,11 +50,18 @@ class _HomePageState extends State<HomePage> {
           },
         );
         useQuize.indexZero();
+        iconAluu = [];
       } else {
-        if (useQuize.joopAluu() == koldonuu) {
-          iconAluu.add(const Icon(Icons.check));
+        if (correctAnswer == koldonuu) {
+          iconAluu.add(const Icon(
+            Icons.check,
+            color: Colors.green,
+          ));
         } else {
-          iconAluu.add(const Icon(Icons.close));
+          iconAluu.add(const Icon(
+            Icons.close,
+            color: Colors.red,
+          ));
         }
         useQuize.nextQuestion();
       }
@@ -122,17 +129,15 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               const SizedBox(height: 30),
-
-              //  ListView.builder(
-              //   itemCount: iconAluu.length,
-              //   scrollDirection: Axis.horizontal,
-              //   itemBuilder: (context,index){
-              //     return iconAluu[];
-              //  })
-              //   const SizedBox(height: 10),
-              // Row(children: [
-              //   iconAluu
-              // ])
+              SizedBox(
+                height: 40,
+                child: ListView.builder(
+                    itemCount: iconAluu.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return iconAluu[index];
+                    }),
+              )
             ],
           ),
         ),
