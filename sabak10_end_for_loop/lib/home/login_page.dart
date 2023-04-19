@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
           context,
           MaterialPageRoute(
             builder: (context) => UserPage(
-              student: student.name,
+              student: student,
             ),
           ),
         );
@@ -80,7 +80,8 @@ class _LoginPageState extends State<LoginPage> {
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(
-                  'https://images.unsplash.com/photo-1544376798-89aa6b82c6cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'),
+                  'https://media.istockphoto.com/id/1280385511/photo/colorful-background.jpg?b=1&s=170667a&w=0&k=20&c=MuV8KwtwQ7Zc7wN5SoGyS0IcBKGCp8GvtQi-MwNdjzM='),
+              fit: BoxFit.cover,
             ),
           ),
           child: Padding(

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class Student {
   Student(
       {required this.id,
+      required this.image,
       required this.name,
       required this.surName,
       required this.age,
@@ -14,7 +15,9 @@ class Student {
       required this.group,
       this.gender,
       this.marriage});
+
   final int id;
+  final String image;
   final String name;
   final String surName;
   int age;
@@ -28,6 +31,8 @@ class Student {
 
 final daniar = Student(
     id: 1,
+    image:
+        'https://cdn.pixabay.com/photo/2021/11/19/20/20/man-6810238_960_720.jpg',
     name: 'Danyar',
     surName: 'Askarov',
     age: 18,
@@ -38,6 +43,8 @@ final daniar = Student(
 
 final dinara = Student(
   id: 2,
+  image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMp4KRSA0SXOGjpD8vLpH_v3z3ky9ObYtj5A&usqp=CAU',
   name: 'Dinara',
   surName: 'Askarov',
   age: 19,
@@ -49,6 +56,7 @@ final dinara = Student(
 
 final hanzada = Student(
   id: 3,
+  image: 'https://www.moy-portret.ru/wp-content/uploads/image00114-500x374.jpg',
   name: 'Hanzada',
   surName: 'Askarov',
   age: 22,
@@ -61,6 +69,8 @@ final hanzada = Student(
 
 final mirbek = Student(
   id: 4,
+  image:
+      'https://img.freepik.com/premium-photo/portrait-of-young-man-in-grey-t-shirt-looking-at-camera-standing-against-white-wall_23-2148213405.jpg',
   name: 'Mirbek',
   surName: 'Askarov',
   age: 21,
@@ -70,6 +80,8 @@ final mirbek = Student(
 
 final aybek = Student(
   id: 5,
+  image:
+      'https://cdn.pixabay.com/photo/2021/06/04/10/28/portrait-6309448_960_720.jpg',
   name: 'Aybek',
   surName: 'Askarov',
   age: 19,
