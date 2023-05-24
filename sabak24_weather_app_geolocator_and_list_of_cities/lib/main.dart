@@ -56,7 +56,8 @@ class _MyHomePageState extends State<MyHomePage> {
         permission == LocationPermission.whileInUse) {
       Position position = await Geolocator.getCurrentPosition();
       Dio dio = Dio();
-      final response = await dio.get(ApiConst.address());
+      final response = await dio.get(
+          ApiConst.address(lat: position.latitude, lon: position.longitude));
       if (response.statusCode == 200) {
         weather = Weather(
           id: response.data['current']['weather'][0]['id'],
@@ -71,7 +72,8 @@ class _MyHomePageState extends State<MyHomePage> {
     } else {
       Position position = await Geolocator.getCurrentPosition();
       Dio dio = Dio();
-      final response = await dio.get(ApiConst.address());
+      final response = await dio.get(
+          ApiConst.address(lat: position.latitude, lon: position.longitude));
       if (response.statusCode == 200) {
         weather = Weather(
           id: response.data['current']['weather'][0]['id'],
@@ -231,10 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                       title: Text(
                         '$city',
-                        style: const TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w800,
-                        ),
+                        style: AppTextStyles.showTextStyle,
                       ),
                     ),
                   );
