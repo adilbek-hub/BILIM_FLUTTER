@@ -49,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
       );
       return weather;
     }
+    return null;
   }
 
   @override
