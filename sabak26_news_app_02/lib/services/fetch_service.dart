@@ -1,8 +1,5 @@
-import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 import 'package:sabak26_news_app_02/constants/api_const.dart';
-import 'package:sabak26_news_app_02/model/top_news.dart';
 
 class TopNewsRepo {
   final http.Client client = http.Client();
