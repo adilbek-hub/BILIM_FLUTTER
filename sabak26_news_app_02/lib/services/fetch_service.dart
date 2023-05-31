@@ -10,12 +10,7 @@ class TopNewsRepo {
     final Uri uri = Uri.parse(ApiConst.topNews);
     final http.Response response = await client.get(uri);
     if (response.statusCode == 200 || response.statusCode == 201) {
-      print(response.body);
-      print("Bul ${response.body.runtimeType}");
-      final data = jsonDecode(response.body);
-      print(data.runtimeType);
-      final topNews = TopNews.fromJson(data);
-      print(topNews.runtimeType);
+      print(response.body.runtimeType);
     }
   }
 }

@@ -14,11 +14,11 @@ class Article {
   final Source source;
   final String? autor;
   final String title;
-  final String? description;
+  final String description;
   final String url;
   final String? urlToImage;
   final String publishedAt;
-  final String? content;
+  final String content;
 
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
