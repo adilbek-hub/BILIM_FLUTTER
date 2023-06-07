@@ -43,7 +43,7 @@ class ResultPage extends StatelessWidget {
                 children: [
                   Text(
                     BmiCalculator().bmiResult(resulattar),
-                    style: TextStyle(fontSize: 24, color: Color(0xff08E82C)),
+                    style:const TextStyle(fontSize: 24, color: Color(0xff08E82C)),
                   ),
                   Text(
                     resulattar.toStringAsFixed(1),

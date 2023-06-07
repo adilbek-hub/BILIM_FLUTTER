@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       onTap: () {
                         setState(() {
                           isTrue = true;
-                          print('object1');
+                          // print('object1');
                         });
                       },
                       child: MaleFemale(
@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       onTap: () {
                         setState(() {
                           isTrue = false;
-                          print('object2');
+                          // print('object2');
                         });
                       },
                       child: MaleFemale(

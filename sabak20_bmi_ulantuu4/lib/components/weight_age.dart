@@ -36,7 +36,7 @@ class WeightAge extends StatelessWidget {
               icon: Icons.remove,
               basuu: removeBasuu,
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             CircularButton(
               icon: Icons.add,
               basuu: addBasuu,

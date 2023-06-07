@@ -27,9 +27,9 @@ class _WeightAgeState extends State<WeightAge> {
                   increment++;
                 });
 
-                print(increment);
+                // print(increment);
               },
-              child: Icon(Icons.add),
+              child: const Icon(Icons.add),
             ),
           ],
         ),
