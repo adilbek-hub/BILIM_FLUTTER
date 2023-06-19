@@ -134,10 +134,10 @@ class _TestViewState extends State<TestView> {
                         } else {
                           kataJoop++;
                         }
+                        setState(() {
+                          indexText++;
+                        });
                       }
-                      setState(() {
-                        indexText++;
-                      });
                     },
                     child: Center(
                       child: Text(widget.suroo[indexText].jooptor[index].text),
