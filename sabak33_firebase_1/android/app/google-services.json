@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "162860758777",
+    "project_id": "todo-c0d50",
+    "storage_bucket": "todo-c0d50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162860758777:android:4eb98f3405a0617230d428",
+        "android_client_info": {
+          "package_name": "com.example.sabak33_firebase_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162860758777-gc4piltrc8hv4uf2un0g5ivdl2lh5ilo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoMCNl7i4MG0einchZWrzY4b81gp6Xqgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162860758777-gc4piltrc8hv4uf2un0g5ivdl2lh5ilo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "162860758777-hmhcolfg9vk9ll2ks1n1g8hbfm8aao7s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sabak33Firebase1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
