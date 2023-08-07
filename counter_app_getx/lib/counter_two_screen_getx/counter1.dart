@@ -17,7 +17,7 @@ class CounterGetxScreen1 extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Obx(
           () => Text(
-            '${controler.count}',
+            '1-Барак',
             style: Theme.of(context).textTheme.headlineMedium,
           ),
         ),
@@ -37,12 +37,7 @@ class CounterGetxScreen1 extends StatelessWidget {
             }),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (contex) => const CounterGetxScreen2(),
-                  ),
-                );
+                Navigator.pushNamed(context, 'counterGetxScreen2');
               },
               child: const Text('To SecondGETX Page'),
             ),
